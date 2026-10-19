@@ -1,0 +1,226 @@
+:root {
+  color-scheme: dark;
+
+  --bg-rail: #0b0b0c;
+  --bg: #0e0e0f;
+  --bg-input: #0f0f10;
+  --surface-1: #121213;
+  --surface-2: #141415;
+  --surface-3: #18181a;
+  --control: #1c1c1e;
+  --hover: #1f1f21;
+  --selected: #232326;
+  --active: #2a2a2d;
+  --overlay: #1d1d20;
+  --overlay-dialog: #161617;
+
+  --border-subtle: #1f1f21;
+  --border: #232325;
+  --border-strong: #2c2c2f;
+  --border-overlay: #333338;
+
+  --text: #e8e6e3;
+  --text-secondary: #c9c6c0;
+  --text-muted: #9c9992;
+  --text-subtle: #8a877f;
+  --text-disabled: #6f6c66;
+  --text-off: #55535a;
+
+  --primary: #3d6fe0;
+  --primary-hover: #4a7bec;
+  --primary-disabled-bg: #1f2433;
+  --primary-disabled-text: #6f7a94;
+  --accent: #5b8def;
+  --link: #8fb2ff;
+  --accent-tint: #22325a;
+  --accent-tint-text: #dfe7ff;
+  --info-bg: #1c2a4a;
+  --info-text: #b7ceff;
+
+  --warning: #e0a43a;
+  --warning-text: #f0c06a;
+  --warning-bg: #3a2f18;
+  --warning-border: #4a3a1c;
+
+  --success: #46b866;
+  --success-solid: #2f9a4a;
+  --success-solid-hover: #37ab55;
+  --success-disabled-bg: #1f2a22;
+  --success-disabled-text: #7d9583;
+  --success-text: #7fdc95;
+  --success-bg: #173020;
+
+  --danger: #e5534b;
+  --danger-text: #f0877f;
+  --danger-badge-text: #f5b3ae;
+  --danger-border: #3a2626;
+  --danger-bg: #2a1414;
+
+  --ai: #c4a7f5;
+  --ai-text: #d5c2fa;
+  --ai-bg: #2a2440;
+
+  --diff-added: rgb(63 185 80 / 10%);
+  --diff-added-gutter: rgb(63 185 80 / 14%);
+  --diff-removed: rgb(248 81 73 / 11%);
+  --diff-removed-gutter: rgb(248 81 73 / 15%);
+  --diff-selected: rgb(91 141 239 / 20%);
+  --diff-selected-gutter: rgb(91 141 239 / 32%);
+
+  --syntax-keyword: #c4a7f5;
+  --syntax-function: #8fb2ff;
+  --syntax-string: #9fd49a;
+  --syntax-number: #f2b46d;
+  --syntax-comment: #8a877f;
+
+  --provider-claude: #e8a07f;
+  --provider-claude-bg: #3a2a22;
+  --provider-codex: #7fd4c8;
+  --provider-codex-bg: #1f2a2a;
+
+  --interrupted: #f08a5d;
+
+  --lane-1: #4fb3d9;
+  --lane-2: #d65bd0;
+  --lane-3: #e5534b;
+  --lane-4: #e0a43a;
+  --lane-5: #5b8def;
+  --lane-6: #46b866;
+  --lane-7: #c4a7f5;
+  --lane-8: #f08a5d;
+
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --text-display: 600 40px/1.1 var(--font-sans);
+  --text-title-1: 600 22px/1.3 var(--font-sans);
+  --text-title-2: 600 16px/1.4 var(--font-sans);
+  --text-body: 400 14px/1.5 var(--font-sans);
+  --text-body-sm: 400 13px/1.45 var(--font-sans);
+  --text-caption: 400 12px/1.4 var(--font-sans);
+  --text-overline: 600 11px/1.4 var(--font-sans);
+  --text-code: 400 12.5px/1.5 var(--font-mono);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+
+  --shadow-menu: 0 12px 32px rgb(0 0 0 / 50%);
+  --shadow-dialog: 0 24px 60px rgb(0 0 0 / 60%);
+
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-pulse: 1.6s;
+  --duration-toast: 2.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font: var(--text-title-1);
+}
+
+h2,
+h3 {
+  font: var(--text-title-2);
+}
+
+a {
+  color: var(--link);
+}
+
+code,
+kbd,
+pre,
+samp {
+  font: var(--text-code);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+*:hover {
+  scrollbar-color: var(--border-overlay) transparent;
+}
+
+::-webkit-scrollbar {
+  width: var(--space-2);
+  height: var(--space-2);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  background: var(--border-strong) padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border-overlay);
+}
+
+::selection {
+  background: var(--diff-selected-gutter);
+}
